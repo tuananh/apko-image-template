@@ -26,4 +26,4 @@ pipeline:
   - runs: |
       mkdir -p ${{targets.destdir}}/usr/local/bin
       echo $'#!/usr/bin/env sh\n\necho hello' >> ${{targets.destdir}}/usr/local/bin/hello
-  - uses: strip
+      chmod +x ${{targets.destdir}}/usr/local/bin/hello
