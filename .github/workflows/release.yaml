@@ -50,7 +50,7 @@ jobs:
         id: apko
         with:
           config: latest.apko.yaml
-          tag: ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
+          tag: ghcr.io/${{ github.repository }}:latest
           keyring-append: /github/workspace/melange.rsa.pub
           source-date-epoch: ${{ steps.snapshot-date.outputs.epoch }}
 
