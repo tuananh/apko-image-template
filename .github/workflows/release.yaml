@@ -39,8 +39,11 @@ jobs:
         run: sudo apt-get install -y qemu-user
 
       - uses: sigstore/cosign-installer@main
+      - uses: chainguard-dev/actions/setup-melange@main
+      - uses: chainguard-dev/actions/melange-keygen@main
       
-      - uses: chainguard-dev/actions/melange-build@main
+      - name: Build hello package
+        uses: chainguard-dev/actions/melange-build@main
         with:
           config: hello.melange.yaml
           sign-with-temporary-key: true
