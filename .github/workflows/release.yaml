@@ -46,7 +46,7 @@ jobs:
           sign-with-temporary-key: true
           archs: x86_64,aarch64
 
-      - uses: chainguard-images/actions/apko-publish@e61cb0631c83e84cadc21337be090ad06bf05da2
+      - uses: chainguard-images/actions/apko-publish@6e9cfac3c961818d9c5ce339a9c559cc0c2e5464
         id: apko
         with:
           config: latest.apko.yaml
