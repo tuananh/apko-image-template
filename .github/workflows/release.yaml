@@ -32,12 +32,7 @@ jobs:
 
       - uses: actions/checkout@main
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
-      
-      - name: Install qemu-user
-        run: sudo apt-get install -y qemu-user
-
+      - uses: docker/setup-qemu-action@e81a89b1732b9c48d79cd809d8d81d79c4647a18 # v2.1.0
       - uses: sigstore/cosign-installer@main
       - uses: chainguard-dev/actions/setup-melange@main
       - uses: chainguard-dev/actions/melange-keygen@main
